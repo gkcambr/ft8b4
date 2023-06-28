@@ -1,7 +1,8 @@
+
+![ft8b4 screen image](https://github.com/gkcambr/ft8b4/blob/main/ft8b4.png?raw=true)
       
 # ft8b4
     
-![ft8b4 screen image](https://github.com/gkcambr/ft8b4/blob/main/ft8b4.png?raw=true)
 The objective of ft8b4 is to provide a free ham radio application that runs on GNU/Linux and performs some of the functions of JT-Alert, a Windows application not available on Linux. The goal is to simplify the selection of which CQ to select for response.  
   
 ft8b4 is a lightweight application with the following functions:  
