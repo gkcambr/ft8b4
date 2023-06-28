@@ -10,6 +10,7 @@ ft8b4 is a lightweight application with the following functions:
   * It filters CQ requests from the received WSJT-X list.  
   * Ft8b4 supports ft8 and ft4 modes.
   * CQs with call signs previously logged by Klog are flagged with the mode, band and date.
+  * Recent QSOs are highlighted in red. Older ones are shown in gray.
   * Duplicate CQs can be eliminated from posting on the ft8b4 terminal if the user chooses.  
   * Users can select a CQ for response by double clicking on the listing in ft8b4.
   
