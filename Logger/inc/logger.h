@@ -1,4 +1,19 @@
-/* 
+ /*
+ * Copyright (C) 2023 G. Keith Cambron
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ *
  * File:   logger.h
  * Author: keithc
  *
@@ -41,7 +56,8 @@ public:
     static const int NO_LOG_LEVELS = 6;
     
     static const int MAX_LOG_MSG_SIZE = 300;
-    static const int MAX_FILE_NAME_SIZE = 300;
+    static const int MAX_FILE_NAME_SIZE = 200;
+    static const int MAX_DATE_STR_SIZE = 100;
 
 protected:
 private:
@@ -51,7 +67,7 @@ private:
     fpos_t *_lastPos;
     char _logFileName[MAX_FILE_NAME_SIZE];
     char _dateLogFileName[MAX_FILE_NAME_SIZE];
-    char _dateStr[MAX_LOG_MSG_SIZE];
+    char _dateStr[MAX_DATE_STR_SIZE];
     int _logLevel;
     int _errCnt[NO_LOG_LEVELS];
     bool _dailyLogs;
