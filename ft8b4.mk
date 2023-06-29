@@ -28,6 +28,7 @@ $(BUILD)/logger.o: $(HOME)/Logger/src/logger.cpp $(HOME)/Logger/inc/logger.h
    $(HOME)/Logger/src/logger.cpp
 
 $(OBJECTS): $(BUILD)/%.o: $(SRC)/%.cpp
+	@ mkdir -p build dist
 	g++ -c $(CPPFLAGS) $(INCFLAGS) $< -o $@\
 
 clean:
