@@ -1,0 +1,49 @@
+Installation note for ft8b4
+version 1.0
+June 29, 2023
+G. Keith Cambron
+
+MAKE FT8B4
+
+Download the ft8b zip file from github and extract the files to a directory named ft8b4.
+To make ft8b4 you will need two libraries, ncurses and sqlite3. On a debian host you can install these libraries using the following commands:
+
+$ sudo apt update
+$ sudo apt install libncurses5-dev
+$ sudp apt install 
+
+Make ft8b4 using the command:
+
+$ make -f ft8b4.mk all
+
+The executable file ft8b4 should be saved in the ft8b4/dist directory. Copy the file to a location on your PATH, such as /usr/local/bin. Make sure it has execute privileges.
+
+CONFIGURE FT8B4
+
+Copy the configuration file, ft8b4.cfg to a location such as $(HOME)/.klog .
+Edit ft8b4.cfg by updating the following fields:
+
+xmitToPort - default is 3333. This port number must agree with the KLOG UPD Port. You can check the port using the Klog menu settings->WSJT-X.
+
+proxyRecvPort - default is 2237. Unless this port is already in use, you can use the default. This port number must agree with the WSJT-X reporting port number. Check the WSJT-X port number using the menu sequence File->Settings->Reporting. Look for the UDP Server port number. Make sure the Accept UDP requests and Notify on accepted UDP request boxes are checked.
+
+sqlite3Db - enter the full path name of where the KLOG database is stored. Normally this will be in $(HOME)/.klog/logbook.dat .
+
+skipDays - this parameter determines when a previous QSO is considered 'recent'. Recent QSOs are highlighted in red on the ft8b4 terminal. Older QSOs are in gray.
+
+msgTTL - this is the length of time a CQ request will be displayed on the ft8b4 terminal. Once it exceeds that time it will be removed.
+
+logFile - if you uncomment this line ft8b4 will create logfiles when you run it. A new log file will be created for each day it is run, so unless you have problems with the application I recommend you leave the line commented out. The log files are not automatically deleted.
+
+RUN ft8b4
+
+To run ft8b4 use the command:
+
+$ ft8b4 ft8b4.cfg
+
+I use a menu item which invokes the command:
+
+$ /usr/loca/bin/ft8b4 /home/keithc/.klog/ft8b4
+
+You can resize the ft8b4 terminal window and the display will refresh when a new message is received. The clr-ft8b4 button does just that; it clears the window.
+The hide-dupes button eliminates duplicate CQs in the terminal window.
