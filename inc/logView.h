@@ -1,4 +1,4 @@
-/*
+ /*
  * Copyright (C) 2023 G. Keith Cambron
  *
  * This program is free software: you can redistribute it and/or modify
@@ -13,8 +13,8 @@
  *
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
- *  
- * File:   LogView.h
+ *
+ * File:   logView.h
  * Author: keithc
  *
  * Created on March 16, 2023, 8:16 AM
@@ -43,6 +43,7 @@ public:
     void processMessage(LogMessage *msg);
     int displayList();
     void setDatabase(char *dBfileName);
+    void setShowCQs(bool s);
     void setSkipDays(int days);
     void setMsgTTL(time_t ttl);
     int deleteDuplicates(std::string callSign, long unsigned int startPos);

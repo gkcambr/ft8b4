@@ -1,4 +1,4 @@
-/*
+ /*
  * Copyright (C) 2023 G. Keith Cambron
  *
  * This program is free software: you can redistribute it and/or modify
@@ -13,8 +13,8 @@
  *
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
- *  
- * File:   LogMessage.h
+ *
+ * File:   logMessage.h
  * Author: keithc
  *
  * Created on March 15, 2023, 11:23 AM
