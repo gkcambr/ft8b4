@@ -8,7 +8,7 @@ INCFLAGS= -I$(INC) -I $(HOME)/Logger/inc -I $(HOME)/Config/inc
 BUILD=build
 DIST=dist
 SRC=$(HOME)/src
-INC=$(HOME)/inc 
+INC=$(HOME)/inc
 
 OBJECTS=$(BUILD)/main.o $(BUILD)/messageBuffer.o \
   $(BUILD)/proxyChannel.o $(BUILD)/sqlLiteDb.o  \
@@ -27,7 +27,7 @@ $(BUILD)/logger.o: $(HOME)/Logger/src/logger.cpp $(HOME)/Logger/inc/logger.h
 	g++ -c -o $(BUILD)/logger.o $(CPPFLAGS) $(INCFLAGS) \
    $(HOME)/Logger/src/logger.cpp
 
-$(OBJECTS): $(BUILD)/%.o: $(SRC)/%.cpp
+$(OBJECTS): $(BUILD)/%.o: $(SRC)/%.cpp $(INC)/%.h
 	@ mkdir -p build dist
 	g++ -c $(CPPFLAGS) $(INCFLAGS) $< -o $@\
 
