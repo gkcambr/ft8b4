@@ -16,7 +16,7 @@ OBJECTS=$(BUILD)/main.o $(BUILD)/messageBuffer.o \
   $(BUILD)/logView.o $(BUILD)/logMessage.o
 
 all: $(OBJECTS) $(BUILD)/config.o $(BUILD)/logger.o
-	g++ -Wall -o $(DIST)/ft8b4 \
+	g++ $(CPPFLAGS) -o $(DIST)/ft8b4 \
   $(OBJECTS) $(BUILD)/config.o $(BUILD)/logger.o -lsqlite3 -lncurses
 
 $(BUILD)/config.o: $(HOME)/Config/src/configFile.cpp $(HOME)/Config/inc/configFile.h
