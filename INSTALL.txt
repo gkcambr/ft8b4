@@ -10,7 +10,7 @@ To make ft8b4 you will need two libraries, ncurses and sqlite3. On a debian host
 
 $ sudo apt update
 $ sudo apt install libncurses5-dev
-$ sudp apt install 
+$ sudp apt install sqlite3
 
 Make ft8b4 using the command:
 
